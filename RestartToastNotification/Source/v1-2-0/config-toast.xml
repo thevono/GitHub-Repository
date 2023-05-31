@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<Feature Name="Toast" Enabled="True" /> <!-- Enables or disables the entire toast notification -->
+	<Feature Name="PendingRebootUptime" Enabled="True" />	<!-- Enables the toast for reminding users of restarting their device if it exceeds the uptime defined in MaxUptimeDays -->
+	<Option Name="MaxUptimeDays" Value="8" />	<!-- When using the toast for checking for pending reboots. A reboot is considered pending if computer uptime exceeds the value set here -->
+	<Option Name="PendingRebootUptimeText" Enabled="True" />	<!-- Adds an additional group to the toast with text about the uptime of the computer -->
+	<Option Name="PendingRebootCheckText" Enabled="False" />	<!-- Adds an additional group to the toast with text -->
+	<Option Name="CreateScriptsAndProtocols" Enabled="True" /> <!-- Automatically create the needed custom scripts and protocols. This removes the need to do scripts and protocols outside of the script -->
+	<Option Name="LimitToastToRunEveryMinutes" Enabled="False" Value="5" /> <!-- Prevents the toast notification from being displayed again within the defined value (in minutes) -->
+	<Option Name="CustomNotificationApp" Enabled="True" Value="MSEdge"/>	<!-- The app in Windows doing the actual notification - can't be both SoftwareCenter and Powershell -->
+	<Option Name="UsePowershellApp" Enabled="False" />	<!-- The app in Windows doing the actual notification - can't be both SoftwareCenter and Powershell -->
+	<Option Name="LogoImageName" Value=".PNG" />  <!-- File name of the image shown as logo in the toast notoification  -->
+	<Option Name="HeroImageName" Value=".PNG" /> <!-- File name of the image shown in the top of the toast notification -->	
+	<Option Name="ActionButton1" Enabled="True" />	<!-- Enables or disables the action button. -->
+	<Option Name="ActionButton2" Enabled="False" />	<!-- Enables or disables the action button. -->
+	<Option Name="DismissButton" Enabled="True" />	<!-- Enables or disables the dismiss button. -->
+	<Option Name="SnoozeButton" Enabled="False" /> <!-- Enabling this option will always enable action button and dismiss button -->
+	<Option Name="Scenario" Type="reminder" />	<!-- Possible values are: reminder | short | long | alarm -->
+	<Option Name="Action1" Value="ToastReboot:" />	<!-- Action taken when using the Action button. Can be any protocol in Windows -->
+	<Option Name="Action2" Value=".COM" />	<!-- Action taken when using the Action button. Can be any protocol in Windows -->
+	<Text Option="GreetGivenName" Enabled="True" />	<!-- Displays the toast with a personal greeting using the users given name retrieved from AD. Will try retrieval from WMI of no local AD -->
+	<en-US> <!-- Default fallback language. This language will be used if MultiLanguageSupport is set to False or if no matching language is found -->
+        <Text Name="PendingRebootUptimeText">Your computer is required to restart due to having exceeded the maximum recommended uptime, 8 days. BE SURE TO SAVE ALL DOCUMENTS PRIOR TO RESTARTING.</Text> <!-- Text used if the PendingRebootUptimeText Option is enabled -->
+        <Text Name="PendingRebootCheckText">Reason: Pending reboots was found in registry or WMI.</Text> <!-- Text used if the PendingRebootUptimeText Option is enabled -->
+        <Text Name="ActionButton1">Restart now</Text>  <!-- Text on the ActionButton if enabled -->
+		<Text Name="ActionButton2">Learn More</Text>  <!-- Text on the ActionButton if enabled -->
+        <Text Name="DismissButton">Dismiss</Text> <!-- Text on the DismissButton if enabled -->
+        <Text Name="SnoozeButton">Snooze</Text> <!-- Text on the SnoozeButton if enabled -->
+        <Text Name="AttributionText">Created by Von Ouch</Text>
+        <Text Name="HeaderText">Restart Toast Notification</Text>
+        <Text Name="TitleText">Your computer requires a restart!</Text>
+        <Text Name="BodyText1">For security and stability reasons, we kindly ask you to restart your computer as soon as possible. Restarting your computer once a week allows the system to get updates and operate at optimal performance. Unfortunately, shutting your system down is DIFFERENT than restarting, booo Microsoft.</Text>
+        <Text Name="BodyText2">This helpful reminder was provided by Booyah HelpDesk - We appreciate your cooperation. Please reach out to Von if you have questions or issues.</Text>
+        <Text Name="SnoozeText">Click snooze to be reminded again in:</Text>
+        <Text Name="DeadlineText">Your deadline is:</Text>
+        <Text Name="GreetMorningText">Good morning</Text>
+        <Text Name="GreetAfternoonText">Good afternoon</Text>
+        <Text Name="GreetEveningText">Good evening</Text>
+        <Text Name="MinutesText">Minutes</Text>
+        <Text Name="HourText">Hour</Text>
+        <Text Name="HoursText">Hours</Text>
+        <Text Name="ComputerUptimeText">Computer uptime:</Text>
+        <Text Name="ComputerUptimeDaysText">days</Text>
+    </en-US>
+</Configuration>
