@@ -1,0 +1,32 @@
+{ 
+    "Rules":[ 
+    {  
+        "SettingName":"Name", 
+        "Operator":"IsEquals", 
+        "DataType":"String", 
+        "Operand":"Google Chrome", 
+        "MoreInfoUrl":"https://www.google.com/", 
+        "RemediationStrings":[  
+         {  
+            "Language":"en_US", 
+            "Title":"Google Chrome is not installed and must be installed for this device to be compliant", 
+            "Description": "Google Chrome must be installed" 
+             } 
+            ] 
+         }, 
+    { 
+        "SettingName":"Version", 
+        "Operator":"GreaterEquals", 
+        "DataType":"Version", 
+        "Operand":"113.0.5672.93", 
+        "MoreInfoUrl":"https://www.google.com/", 
+        "RemediationStrings":[  
+        {  
+            "Language":"en_US", 
+            "Title":"Google Chrome is running an outdated version and needs to be updated before this device will be marked as compliant", 
+            "Description": "Update Google Chrome to version 113.0.5672.93 or newer" 
+        } 
+        ] 
+    } 
+    ] 
+} 
