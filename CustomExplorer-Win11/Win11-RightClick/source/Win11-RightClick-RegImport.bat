@@ -1,0 +1,1 @@
+regedit.exe /S "%~dp0Win11-RightClick.reg"
