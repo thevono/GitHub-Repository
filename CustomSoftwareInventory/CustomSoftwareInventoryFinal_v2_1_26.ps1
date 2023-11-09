@@ -12,7 +12,7 @@
 .NOTES
     FileName:    Invoke-CustomInventory.ps1
     Author:      Jan Ketil Skanke
-    Contributor: Sandy Zeng / Maurice Daly
+    Contributor: Sandy Zeng / Maurice Daly / Von Ouch
     Contact:     @JankeSkanke
     Created:     2021-01-Feb
     Updated:     2021-Nov-07
